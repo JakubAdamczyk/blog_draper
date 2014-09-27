@@ -2,9 +2,10 @@
 
     <% @articles.each do |article| %>
       <div>
-        <%= article.title %>
-        <%= article.author %>
-        <%= article.content %>
+        <h2><%= article.title %>
+        <h3><%= publication_status(article) %></h3>
+        <h4><%= article.author %></h4>
+        <p><%= article.content %></p>
       </div>
       <hr>
     <% end %>
