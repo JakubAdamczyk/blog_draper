@@ -5,6 +5,7 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.all
+    @articles = ArticleDecorator.decorate_collection(Article.all)
   end
 
   # GET /articles/1

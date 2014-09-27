@@ -10,11 +10,12 @@ class ArticleDecorator < Draper::Decorator
   #     end
   #   end
 
-  def publication_status(article) 
+  def publication_status
     if published? 
      "Published at #{published_at}" 
-   else 
+    else 
      "Unpublished" 
+    end
    end 
 
    def published_at 
